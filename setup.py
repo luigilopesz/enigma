@@ -13,7 +13,7 @@ setup(
   description="Um simples projeto de exemplo com 'Hello, World!'",
   long_description=open("README.md").read() if os.path.exists("README.md") else "",
   long_description_content_type="text/markdown",
-  url="https://github.com/seu-usuario/enigma",  # Substitua pelo URL do seu repositório, se houver
+  url="https://github.com/luigilopesz/enigma",  # Substitua pelo URL do seu repositório, se houver
   classifiers=[
     "Programming Language :: Python :: 3",
       "License :: OSI Approved :: MIT License",
