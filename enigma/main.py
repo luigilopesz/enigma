@@ -70,10 +70,9 @@ def decriptar_enigma(msg_enc : str, P : np.ndarray, Q : np.ndarray) -> str:
     nmsg += char
   return nmsg
 
-def main(msg):
+def main():
+  msg = input('enigma:  ')
   p, q = gerar_matrizes_de_permutacao(121)
   a = encriptar_enigma(msg, p, q)
   msgdec = decriptar_enigma(a, p, q)
   return a, msgdec
-
-print(main('o bolo de chocolate fica pronto quatro horas da tarde'))
