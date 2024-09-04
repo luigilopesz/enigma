@@ -43,9 +43,6 @@ def encriptar_enigma(msg : str, P : np.ndarray, Q : np.ndarray) -> str:
   nmsg = ''
   for c in range(len(msg)):
     char = getChar(tm[:,c])
-    if char is None:
-      breakpoint()
-    char = getChar(tm[:,c])
     nmsg += char
   return nmsg
 
@@ -64,9 +61,6 @@ def decriptar_enigma(msg_enc : str, P : np.ndarray, Q : np.ndarray) -> str:
   nmsg = ''
   for c in range(len(msg_enc)):
     char = getChar(tm[:,c]) 
-    if char is None:
-      breakpoint()
-    char = getChar(tm[:,c])
     nmsg += char
   return nmsg
 
