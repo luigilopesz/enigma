@@ -53,8 +53,7 @@ def decriptar_enigma(msg_enc : str, P : np.ndarray, Q : np.ndarray) -> str:
     matrix.append(table[c])
   matrix = np.asarray(matrix)
   tm = np.transpose(matrix) 
-  imp = np.linalg.inv(P)
-  imq = np.linalg.inv(Q)
+  imp, imq = np.linalg.inv(P), np.linalg.inv(Q)
   for c in range(len(msg_enc)):
     tm[:,c] = imp @ tm[:,c]
     imp = imp @ imq
@@ -70,3 +69,5 @@ def main():
   a = encriptar_enigma(msg, p, q)
   msgdec = decriptar_enigma(a, p, q)
   return a, msgdec
+
+print(main())
